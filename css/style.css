@@ -79,4 +79,12 @@ section {
   width: 1920px;
 }
 
+.card {
+  margin: 10px auto 0;
+  width: 1200px;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px #333;
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
