@@ -1,7 +1,7 @@
 //base
 @import 'sass/base/var';
 @import 'sass/base/color';
-
+// @use "sass:math";
 // component
 @import 'sass/component/btn';
 
@@ -21,17 +21,32 @@
 @import 'sass/plugin/all';
 
 
+//運算
+
+.w {
+  width: 10px + 2;
+  height: 10 - 3px;
+  padding: 10 * 3 +px;
+  font: (24 / 6) +px;
+}
 
 
 
+// if else
 
+$w : 1200;
 
+.wrapper {
+  @if $w==full {
+    width: 100%;
+  }
 
+  @else if $w==fixed {
+    width: 1200px;
+    margin: auto;
+  }
 
-
-
-
-
-
-
-
+  @else {
+    width: $w + px;
+  }
+}
