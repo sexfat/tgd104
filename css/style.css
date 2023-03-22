@@ -51,4 +51,14 @@ h1 {
   width: 1200px;
 }
 
+.box {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.section {
+  margin: 0 auto;
+  width: 1000px;
+}
+
 /*# sourceMappingURL=style.css.map */

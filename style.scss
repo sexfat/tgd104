@@ -45,8 +45,35 @@ $w : 1200;
     width: 1200px;
     margin: auto;
   }
-
   @else {
     width: $w + px;
   }
 }
+
+//  宣告
+@mixin center($w , $top:0){
+  @if $top == 0 {
+    margin: $top auto;
+  }@else {
+   margin: $top auto 0;
+  }
+  width: $w;
+}
+
+//引用
+.box {
+  @include center(100px);
+}
+
+.section{
+  @include center(1000px);
+
+}
+
+
+
+
+
+
+
+
