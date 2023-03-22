@@ -6,6 +6,7 @@ $bgc : #e1e1e1;
 // basic color
 $fontColor : #333;
 $white : #eee;
+$margin : 30px 30px 10px 10px; //list
 // use color
 $primaryColor : #004cfc;
 $secondaryColor : #fc9300;
@@ -13,17 +14,32 @@ $infoColor : #00ffaa;
 $successColor : #40ff00;
 $errorColor : #fc0050;
 $warningColor : #fcf400;
-
 $titleFontSize : 40px; 
-//font family 
+//font family
 $fontFamily : "Arial, Helvetica, sans-serif"; //字串
 
+$map :(
+ key : value,
+ h1 : 40px,
+ h2 : 30px
+); // map
+
+$size : 10px;
+$size : 20px !default;
 
 
+
+h1 {
+  $a : 20px !global;  //區域變數
+  font-size: map-get($map, h1);
+  font-weight: null; // null 屬性會被刪除
+  margin-top: $size;
+  padding: $a;
+}
 
 
 body {
-  padding: 0px;
+  padding: $a;
   margin: 0px;
   font-size: $body_fontSize;
   font-weight: 400;
