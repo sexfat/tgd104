@@ -1,0 +1,38 @@
+// 變數
+/*變數*/
+$body_fontSize : 14px; //數值
+$bgc : #e1e1e1;  
+
+// basic color
+$fontColor : #333;
+$white : #eee;
+// use color
+$primaryColor : #004cfc;
+$secondaryColor : #fc9300;
+$infoColor : #00ffaa;
+$successColor : #40ff00;
+$errorColor : #fc0050;
+$warningColor : #fcf400;
+
+$titleFontSize : 40px; 
+//font family 
+$fontFamily : "Arial, Helvetica, sans-serif"; //字串
+
+
+
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: $body_fontSize;
+  font-weight: 400;
+  background-color: $bgc;
+  font-family: $fontFamily;
+}
+.wrapper {
+    width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    min-height: 300px;
+}
