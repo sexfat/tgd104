@@ -4,13 +4,52 @@ body {
       font-weight: 400;
       background-color: $bgc;
       font-family: $fontFamily;
+      .wrapper-full {
+        @include layout(100);
+      }
+      
       .wrapper {
-        width: 100%;
-        margin: auto;
-        background-color: #fff;
-        min-height: 300px;
-       }
+        @include layout(1366px);
+      }
+       section {
+        @include layout(100);
     }
+    }
+
+    @include t(){
+        .box {
+          @include center(800px);  
+          background-color: #0116fe;
+        }
+      }
+      @include m(){
+      // 手機板
+       .box {
+          width: 100%;
+          background-color: #3ffe00;
+       }
+      };
+      
+      @include m(){
+        
+      nav {
+         width:  90%;
+      }
+      
+      }
+      
+      
+      @include m(){
+         h1 {
+           font-size: 20px;
+         }
+      
+      
+      }
+      
+
+
+
     
 
 

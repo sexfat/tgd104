@@ -1,8 +1,16 @@
-// .index {
-//     //首頁
-//     .content {
-     
+.index {
+    //首頁
+    .content {
+        width: 100%;
+        height: 300px;
+      background-color: aqua;
+      @include t(){
+       background-color: aquamarine; 
+      }
+      @include m(){
+       background-color: black;
+      }     
   
-//     }
+    }
   
-//   }
+  }

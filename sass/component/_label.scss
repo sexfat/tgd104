@@ -1,0 +1,26 @@
+.tag{
+    width: 140px;
+    height: 45px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.5em;
+    cursor: pointer;
+    &-round {
+        border-radius: 25px;
+        height: 47px;
+        line-height: 47px;
+    }
+    &-black {
+        @include tag(#2E3646);
+    }
+    &-lightpink {
+         @include tag(#FD9FFF);
+    } 
+
+    &-yellow {
+      @include tag(#FFEE55 , #000); 
+    } 
+
+}

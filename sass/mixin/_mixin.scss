@@ -1,0 +1,57 @@
+//  置中
+@mixin center($w, $top:0) {
+    @if $top==0 {
+      margin: $top auto;
+    }
+    @else {
+      margin: $top auto 0;
+    }
+    width: $w;
+}
+//layout
+@mixin layout($w) {
+    @if $w==100 {
+      width: 100%;
+      // padding: 0 15px;
+    }
+    @else {
+      @include center($w, 0);
+    }
+}
+// card
+@mixin card($w, $bgc:#fff ,$border:null){
+    @include center($w, 10px);
+    background-color: $bgc ;
+    box-shadow: 10px 10px 10px #333;
+    border: $border;
+    border-radius: 10px
+  }
+
+
+  //手機
+@mixin m(){
+  @media screen and (max-width: $m_breakpoint) {
+    @content;  
+  }
+}
+
+//平板
+@mixin t(){
+  @media screen and (max-width : $t_breakpoint){
+    @content;
+  }
+}
+
+
+@mixin tag($bgc , $color: #fff){
+  background-color: $bgc;
+  color: $color;
+  &:hover {
+   background-color: darken($bgc, 20);
+  }
+}
+  
+
+
+
+
