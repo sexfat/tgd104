@@ -1,36 +1,7 @@
-// 變數
-/*變數*/
-$body_fontSize : 14px; //數值
-$bgc : #e1e1e1;  
+@import 'sass/base/var';
+@import 'sass/base/color';
+@import 'sass/page/about';
 
-// basic color
-$fontColor : #333;
-$white : #eee;
-$margin : 30px 30px 10px 10px; //list
-// use color
-$primaryColor : #004cfc;
-$secondaryColor : #fc9300;
-$infoColor : #00ffaa;
-$successColor : #40ff00;
-$errorColor : #fc0050;
-$warningColor : #fcf400;
-$titleFontSize : 40px; 
-//font family
-$fontFamily : "Arial, Helvetica, sans-serif"; //字串
-
-$map :(
- key : value,
- h1 : 40px,
- h2 : 30px
-); // map
-
-$size : 10px;
-$size : 20px !default;
-
-// 轉型用
-$title : "h1";
-$attr : "margin";
-$url: "img";
 
 // 變數轉型 class attr img_url
 #{$title} {
@@ -57,7 +28,7 @@ body {
   background-color: $bgc;
   font-family: $fontFamily;
 }
-.wrapper-full {
+.wrapper {
     width: 100%;
     margin: auto;
     background-color: #fff;
@@ -68,10 +39,10 @@ body {
         width: 100%;
         ul {
             list-style: none;
-            li{
-               display: flex;
+            display: flex;
+            flex-direction: row;
+            li{    
                width: 150px;
-               flex-direction: row;
                text-align: center;
                background-color: $infoColor;
                height: 80px;
@@ -86,6 +57,24 @@ body {
       }
     }
 }
+
+.index {
+  //首頁
+  .content {
+   
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
 
 // .wrapper header {
 //  height: 300px; 
