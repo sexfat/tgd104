@@ -61,4 +61,22 @@ h1 {
   width: 1000px;
 }
 
+.wrapper-full {
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1366px;
+}
+
+section {
+  width: 100%;
+}
+
+.banner {
+  margin: 0 auto;
+  width: 1920px;
+}
+
 /*# sourceMappingURL=style.css.map */

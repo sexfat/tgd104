@@ -45,18 +45,22 @@ $w : 1200;
     width: 1200px;
     margin: auto;
   }
+
   @else {
     width: $w + px;
   }
 }
 
 //  宣告
-@mixin center($w , $top:0){
-  @if $top == 0 {
+@mixin center($w, $top:0) {
+  @if $top==0 {
     margin: $top auto;
-  }@else {
-   margin: $top auto 0;
   }
+
+  @else {
+    margin: $top auto 0;
+  }
+
   width: $w;
 }
 
@@ -65,15 +69,33 @@ $w : 1200;
   @include center(100px);
 }
 
-.section{
+.section {
   @include center(1000px);
+}
 
+@mixin layout($w) {
+  @if $w==100 {
+    width: 100%;
+    // padding: 0 15px;
+  }
+  @else {
+    @include center($w, 0);
+  }
+}
+
+.wrapper-full {
+  @include layout(100);
+}
+
+.wrapper {
+  @include layout(1366px);
 }
 
 
+section {
+  @include layout(100);
+}
 
-
-
-
-
-
+.banner {
+   @include layout(1920px);
+}
