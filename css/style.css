@@ -20,11 +20,34 @@ body {
   font-family: "Arial, Helvetica, sans-serif";
 }
 
-.wrapper {
-  width: 1200px;
+.wrapper-full {
+  width: 100%;
   margin: auto;
   background-color: #fff;
   min-height: 300px;
+}
+.wrapper-full header {
+  height: 300px;
+}
+.wrapper-full header nav {
+  width: 100%;
+}
+.wrapper-full header nav ul {
+  list-style: none;
+}
+.wrapper-full header nav ul li {
+  display: flex;
+  width: 150px;
+  flex-direction: row;
+  text-align: center;
+  background-color: #00ffaa;
+  height: 80px;
+}
+.wrapper-full header nav ul li a {
+  color: #333;
+}
+.wrapper-full header nav ul li a:hover {
+  color: #f20;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,20 +27,17 @@ $map :(
 $size : 10px;
 $size : 20px !default;
 
-
+// 轉型用
 $title : "h1";
 $attr : "margin";
 $url: "img";
 
-// class attr img_url
+// 變數轉型 class attr img_url
 #{$title} {
  font-size : 50px;
  #{$attr}: 30px;
  background-image: url('./#{$url}/aa.jpg');
-
 }
-
-
 
 
 h1 {
@@ -60,9 +57,40 @@ body {
   background-color: $bgc;
   font-family: $fontFamily;
 }
-.wrapper {
-    width: 1200px;
+.wrapper-full {
+    width: 100%;
     margin: auto;
     background-color: #fff;
     min-height: 300px;
+    header {
+      height: 300px;
+      nav {
+        width: 100%;
+        ul {
+            list-style: none;
+            li{
+               display: flex;
+               width: 150px;
+               flex-direction: row;
+               text-align: center;
+               background-color: $infoColor;
+               height: 80px;
+               a {
+                  color : #333;
+                  &:hover {
+                    color : #f20
+                  }
+               }
+            }
+        }
+      }
+    }
 }
+
+// .wrapper header {
+//  height: 300px; 
+// }
+
+
+// .wrapper header nav ul li {
+// }
