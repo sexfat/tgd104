@@ -1,0 +1,16 @@
+body {
+      margin: 0px;
+      font-size: $body_fontSize;
+      font-weight: 400;
+      background-color: $bgc;
+      font-family: $fontFamily;
+      .wrapper {
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+        min-height: 300px;
+       }
+    }
+    
+
+

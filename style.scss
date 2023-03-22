@@ -1,71 +1,24 @@
+//base
 @import 'sass/base/var';
 @import 'sass/base/color';
+
+// component
+@import 'sass/component/btn';
+
+//layout
+@import 'sass/layout/header';
+@import 'sass/layout/nav';
+@import 'sass/layout/login';
+@import 'sass/layout/footer';
+@import 'sass/layout/title';
+
+// page
+@import 'sass/page/index';
 @import 'sass/page/about';
+@import 'sass/page/product';
 
-
-// 變數轉型 class attr img_url
-#{$title} {
- font-size : 50px;
- #{$attr}: 30px;
- background-image: url('./#{$url}/aa.jpg');
-}
-
-
-h1 {
-  $a : 20px;  //區域變數
-  font-size: map-get($map, h1);
-  font-weight: null; // null 屬性會被刪除
-  margin-top: $size;
-  padding: $a;
-}
-
-
-body {
-//   padding: $a;
-  margin: 0px;
-  font-size: $body_fontSize;
-  font-weight: 400;
-  background-color: $bgc;
-  font-family: $fontFamily;
-}
-.wrapper {
-    width: 100%;
-    margin: auto;
-    background-color: #fff;
-    min-height: 300px;
-    header {
-      height: 300px;
-      nav {
-        width: 100%;
-        ul {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            li{    
-               width: 150px;
-               text-align: center;
-               background-color: $infoColor;
-               height: 80px;
-               a {
-                  color : #333;
-                  &:hover {
-                    color : #f20
-                  }
-               }
-            }
-        }
-      }
-    }
-}
-
-.index {
-  //首頁
-  .content {
-   
-
-  }
-
-}
+// plugin
+@import 'sass/plugin/all';
 
 
 
@@ -76,10 +29,9 @@ body {
 
 
 
-// .wrapper header {
-//  height: 300px; 
-// }
 
 
-// .wrapper header nav ul li {
-// }
+
+
+
+

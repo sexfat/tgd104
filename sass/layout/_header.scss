@@ -1,0 +1,23 @@
+header {
+    height: 300px;
+    nav {
+      width: 100%;
+      ul {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          li{    
+             width: 150px;
+             text-align: center;
+             background-color: $infoColor;
+             height: 80px;
+             a {
+                color : #333;
+                &:hover {
+                  color : #f20
+                }
+             }
+          }
+      }
+    }
+  }
