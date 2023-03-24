@@ -24,16 +24,16 @@
 //桌機
 @include grid(12);
 
-@include media(768px , md){
-  @include grid(12)
+@include media(768px){
+  @include grid(12 , 'md')
 }
 
-@include media(1024px , lg){
-    @include grid(12)
+@include media(1024px){
+    @include grid(12, 'lg')
   }
 
-@include media(1200px , xl){
-    @include grid(12)
+@include media(1200px){
+    @include grid(12 , 'xl')
   }
 /* --------------------------------------- */
 .row-cols-1 .col{
