@@ -878,4 +878,19 @@ body section {
 
 .hotpink_outline {
   border-color: #F023FD;
+}
+
+.green {
+  color: #27B096;
+}
+.green:hover {
+  color: #145d4f;
+}
+
+.green_b {
+  background-color: #27B096;
+}
+
+.green_outline {
+  border-color: #27B096;
 }/*# sourceMappingURL=style.css.map */
