@@ -11,6 +11,7 @@
 // component
 @import 'sass/component/btn';
 @import 'sass/component/label';
+@import 'sass/component/grid';
 
 //layout
 @import 'sass/layout/header';
@@ -114,14 +115,3 @@ $link : #f20;
 }
 
 // @include push(50 , left);
-
-
-@mixin grid($num) {
-    @for $i from 1 through $num {
-        .col-#{$i} {
-            width: ($i / $num)*100%;
-        }
-    }
-}
-
-@include grid(12);

@@ -1,57 +1,91 @@
 //  置中
 @mixin center($w, $top:0) {
-    @if $top==0 {
-      margin: $top auto;
-    }
-    @else {
-      margin: $top auto 0;
-    }
-    width: $w;
+  @if $top==0 {
+    margin: $top auto;
+  }
+
+  @else {
+    margin: $top auto 0;
+  }
+
+  width: $w;
 }
+
 //layout
 @mixin layout($w) {
-    @if $w==100 {
-      width: 100%;
-      // padding: 0 15px;
-    }
-    @else {
-      @include center($w, 0);
-    }
+  @if $w==100 {
+    width: 100%;
+    // padding: 0 15px;
+  }
+
+  @else {
+    @include center($w, 0);
+  }
 }
+
 // card
-@mixin card($w, $bgc:#fff ,$border:null){
-    @include center($w, 10px);
-    background-color: $bgc ;
-    box-shadow: 10px 10px 10px #333;
-    border: $border;
-    border-radius: 10px
-  }
-
-
-  //手機
-@mixin m(){
-  @media screen and (max-width: $m_breakpoint) {
-    @content;  
-  }
+@mixin card($w, $bgc:#fff, $border:null) {
+  @include center($w, 10px);
+  background-color: $bgc;
+  box-shadow: 10px 10px 10px #333;
+  border: $border;
+  border-radius: 10px
 }
 
-//平板
-@mixin t(){
-  @media screen and (max-width : $t_breakpoint){
+
+//手機
+@mixin m() {
+  @media screen and (max-width: $m_breakpoint) {
     @content;
   }
 }
 
-
-@mixin tag($bgc , $color: #fff){
-  background-color: $bgc;
-  color: $color;
-  &:hover {
-   background-color: darken($bgc, 20);
+//平板
+@mixin t() {
+  @media screen and (max-width : $t_breakpoint) {
+    @content;
   }
 }
-  
+
+//給其他斷點使用
+@mixin media($bp) {
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+
+
+
+}
 
 
 
 
+
+@mixin tag($bgc, $color: #fff) {
+  background-color: $bgc;
+  color: $color;
+
+  &:hover {
+    background-color: darken($bgc, 20);
+  }
+}
+
+
+
+// grid 
+@mixin grid($num, $bp:null) {
+  @for $i from 1 through $num {
+    @if $bp == null {
+      .col-#{$i} {
+        width: calc($i / $num)*100%;
+      }
+    }
+
+    @else {
+      .col-#{$bp}-#{$i} {
+        width: calc($i / $num)*100%;
+      }
+
+    }
+  }
+}
