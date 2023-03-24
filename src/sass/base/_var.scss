@@ -1,0 +1,33 @@
+// 變數
+/*變數*/
+$body_fontSize : 14px; //數值
+$bgc : #e1e1e1;  
+
+// basic color
+$fontColor : #333;
+$white : #eee;
+$margin : 30px 30px 10px 10px; //list
+
+$titleFontSize : 40px; 
+//font family
+$fontFamily : "Arial, Helvetica, sans-serif"; //字串
+
+$map :(
+ key : value,
+ h1 : 40px,
+ h2 : 30px
+); // map
+
+$size : 10px;
+$size : 20px !default;
+
+// 轉型用
+$title : "h1";
+$attr : "margin";
+$url: "img";
+
+
+//斷點
+
+$m_breakpoint : 720px;
+$t_breakpoint : 1024px;

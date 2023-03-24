@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+[class*='col-'],
+.col{
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+//桌機
+@include grid(12);
+
+@include media(768px){
+  @include grid(12 , 'md')
+}
+
+@include media(1024px){
+    @include grid(12, 'lg')
+  }
+
+@include media(1200px){
+    @include grid(12 , 'xl')
+  }
+/* --------------------------------------- */
+.row-cols-1 .col{
+    width: 100%;
+}
+.row-cols-2 .col{
+    width: 50%;
+}
+.row-cols-3 .col{
+    width: 33.3333%;
+}
+.row-cols-4 .col{
+    width: 25%;
+}
+.row-cols-5 .col{
+    width: 20%;
+}
+.row-cols-6 .col{
+    width: 16.6667%;
+}
+
+@media screen and (min-width:726px){
+.row-cols-md-1 .col{
+    width: 100%;
+}
+.row-cols-md-2 .col{
+    width: 50%;
+}
+.row-cols-md-3 .col{
+    width: 33.3333%;
+}
+.row-cols-md-4 .col{
+    width: 25%;
+}
+.row-cols-md-5 .col{
+    width: 20%;
+}
+.row-cols-md-6 .col{
+    width: 16.6667%;
+}
+}
+@media screen and (min-width:1024px){
+    .row-cols-lg-1 .col{
+    width: 100%;
+}
+.row-cols-lg-2 .col{
+    width: 50%;
+}
+.row-cols-lg-3 .col{
+    width: 33.3333%;
+}
+.row-cols-lg-4 .col{
+    width: 25%;
+}
+.row-cols-lg-5 .col{
+    width: 20%;
+}
+.row-cols-lg-6 .col{
+    width: 16.6667%;
+}
+}
+@media screen and (min-width:1200px){
+    .row-cols-xl-1 .col{
+    width: 100%;
+}
+.row-cols-xl-2 .col{
+    width: 50%;
+}
+.row-cols-xl-3 .col{
+    width: 33.3333%;
+}
+.row-cols-xl-4 .col{
+    width: 25%;
+}
+.row-cols-xl-5 .col{
+    width: 20%;
+}
+.row-cols-xl-6 .col{
+    width: 16.6667%;
+}
+}
