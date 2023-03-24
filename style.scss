@@ -99,3 +99,11 @@ $link : #f20;
 .w {
   width:  ceil(110/4);// 無條件進位
 }
+
+
+@for $i from 1 through 100 {
+    .push_#{$i} {
+       position: relative;
+       left : 1px * $i
+    }
+}
