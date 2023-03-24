@@ -87,6 +87,7 @@ $link : #f20;
         color: $link;
         font-size: 40px;
         transition: all .3s ease;
+
         &:hover {
             color: darken($link, 50);
             // color: invert($link, 100);
@@ -97,13 +98,27 @@ $link : #f20;
 
 //運算函式
 .w {
-  width:  ceil(110/4);// 無條件進位
+    width: ceil(110/4); // 無條件進位
 }
 
+// @for 
+// push 推物件
 
-@for $i from 1 through 100 {
-    .push_#{$i} {
-       position: relative;
-       left : 1px * $i
+@mixin push($num , $dir){
+    @for $i from 1 through $num {
+        .#{$dir}_#{$i} {
+            position: relative;
+            #{$dir}: 1px * $i
+        }
     }
 }
+
+@include push(50 , left);
+
+
+
+
+
+
+
+
