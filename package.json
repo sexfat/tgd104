@@ -6,10 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexfat/tgd104.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^5.2.3"
+  "bugs": {
+    "url": "https://github.com/sexfat/tgd104/issues"
+  },
+  "homepage": "https://github.com/sexfat/tgd104#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
