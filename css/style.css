@@ -484,9 +484,14 @@ body section {
 .color_darken a {
   color: #f20;
   font-size: 40px;
+  transition: all 0.3s ease;
 }
 .color_darken a:hover {
-  color: #991400;
+  color: black;
+}
+
+.w {
+  width: 34;
 }
 
 /*# sourceMappingURL=style.css.map */

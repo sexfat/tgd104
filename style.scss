@@ -76,29 +76,27 @@ $w : 1200;
 
 
 .card {
-@include card(1200px)
+    @include card(1200px)
 }
 
 $link : #f20;
 
-
+//顏色函式
 .color_darken {
- a {   
-  color: $link;
-  font-size: 40px;
-  &:hover {
-    color : darken($link, 20);
-  }
- }
+    a {
+        color: $link;
+        font-size: 40px;
+        transition: all .3s ease;
+        &:hover {
+            color: darken($link, 50);
+            // color: invert($link, 100);
+            // color: lighten($link, 20);
+        }
+    }
 }
 
 
-
-
-
-
-
-
-
-
-
+//運算函式
+.w {
+  width:  ceil(100/3);// 無條件進位
+}
