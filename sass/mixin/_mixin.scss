@@ -98,3 +98,26 @@
       }
    }   
 }
+
+// 顏色
+
+@mixin colors($color){
+
+  @each $k , $v in $color {
+    .#{$k} {
+       color : $v;   
+       &:hover {
+        color: darken($v, 20)
+     }
+    }
+    .#{$k}_b{
+      background-color: $v;
+     
+    }
+    .#{$k}_outline {
+        border-color: $v; 
+    } 
+  }
+}
+
+

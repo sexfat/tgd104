@@ -310,6 +310,26 @@ template {
   display: none;
 }
 
+.w {
+  width: 12px;
+  height: 7px;
+  padding: 30px;
+  font: 4px;
+}
+
+.btn {
+  width: 100%;
+  padding: 20px 6px;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-r {
+  border-radius: 30px;
+}
+
 .tag {
   width: 140px;
   height: 45px;
@@ -656,6 +676,96 @@ h5 {
   font-weight: 400;
 }
 
+.black {
+  color: #2E3646;
+}
+.black:hover {
+  color: #060708;
+}
+
+.black_b {
+  background-color: #2E3646;
+}
+
+.black_outline {
+  border-color: #2E3646;
+}
+
+.rarkgray {
+  color: #5F6D7E;
+}
+.rarkgray:hover {
+  color: #333b44;
+}
+
+.rarkgray_b {
+  background-color: #5F6D7E;
+}
+
+.rarkgray_outline {
+  border-color: #5F6D7E;
+}
+
+.red {
+  color: #c93838;
+}
+.red:hover {
+  color: #7a2121;
+}
+
+.red_b {
+  background-color: #c93838;
+}
+
+.red_outline {
+  border-color: #c93838;
+}
+
+.hotpink {
+  color: #F023FD;
+}
+.hotpink:hover {
+  color: #ad02b8;
+}
+
+.hotpink_b {
+  background-color: #F023FD;
+}
+
+.hotpink_outline {
+  border-color: #F023FD;
+}
+
+.green {
+  color: #27B096;
+}
+.green:hover {
+  color: #145d4f;
+}
+
+.green_b {
+  background-color: #27B096;
+}
+
+.green_outline {
+  border-color: #27B096;
+}
+
+.white {
+  color: #fff;
+}
+.white:hover {
+  color: #cccccc;
+}
+
+.white_b {
+  background-color: #fff;
+}
+
+.white_outline {
+  border-color: #fff;
+}
+
 header {
   height: 300px;
 }
@@ -818,79 +928,4 @@ body section {
 
 .img_banner {
   background-image: url("image/banner.jpg");
-}
-
-.black {
-  color: #2E3646;
-}
-.black:hover {
-  color: #060708;
-}
-
-.black_b {
-  background-color: #2E3646;
-}
-
-.black_outline {
-  border-color: #2E3646;
-}
-
-.rarkgray {
-  color: #5F6D7E;
-}
-.rarkgray:hover {
-  color: #333b44;
-}
-
-.rarkgray_b {
-  background-color: #5F6D7E;
-}
-
-.rarkgray_outline {
-  border-color: #5F6D7E;
-}
-
-.red {
-  color: #FF3E3E;
-}
-.red:hover {
-  color: #d70000;
-}
-
-.red_b {
-  background-color: #FF3E3E;
-}
-
-.red_outline {
-  border-color: #FF3E3E;
-}
-
-.hotpink {
-  color: #F023FD;
-}
-.hotpink:hover {
-  color: #ad02b8;
-}
-
-.hotpink_b {
-  background-color: #F023FD;
-}
-
-.hotpink_outline {
-  border-color: #F023FD;
-}
-
-.green {
-  color: #27B096;
-}
-.green:hover {
-  color: #145d4f;
-}
-
-.green_b {
-  background-color: #27B096;
-}
-
-.green_outline {
-  border-color: #27B096;
 }/*# sourceMappingURL=style.css.map */
