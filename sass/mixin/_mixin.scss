@@ -86,3 +86,15 @@
     }
   }
 }
+
+
+// title標題字
+@mixin titles($titles){
+  @each $k , $v in $titles {
+      #{$k} {
+          font-size: $v; 
+          font-family: Verdana, 'jf-openhuninn-1', sans-serif;
+          font-weight: 400
+      }
+   }   
+}

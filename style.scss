@@ -2,6 +2,7 @@
 @import 'sass/base/var';
 @import 'sass/base/color';
 @import 'sass/base/normal';
+@import 'sass/base/font';
 
 @import 'sass/mixin/mixin';
 
@@ -12,6 +13,7 @@
 @import 'sass/component/btn';
 @import 'sass/component/label';
 @import 'sass/component/grid';
+@import 'sass/component/text';
 
 //layout
 @import 'sass/layout/header';
@@ -115,3 +117,59 @@ $link : #f20;
 }
 
 // @include push(50 , left);
+
+
+//@each
+// list
+
+$imglist :a1 a2 a3 banner; // list
+
+@mixin imgbg($imglist){
+    @each $img in $imglist  {
+        .img_#{$img} {
+            background-image: url('image/#{$img}.jpg');
+        } 
+    }
+}
+
+@include imgbg($imglist);
+
+// map  color
+$color : (
+    black : #2E3646,
+    rarkgray : #5F6D7E,
+    red :  #FF3E3E,
+    hotpink : #F023FD 
+);
+
+
+
+@each $k , $v in $color {
+    .#{$k} {
+       color : $v;   
+       &:hover {
+        color: darken($v, 20)
+     }
+    }
+    .#{$k}_b{
+      background-color: $v;
+     
+    }
+    .#{$k}_outline {
+        border-color: $v; 
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -620,6 +620,42 @@ template {
     width: 16.6667%;
   }
 }
+h1 {
+  font-size: 40px;
+  font-family: Verdana, "jf-openhuninn-1", sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: Verdana, "jf-openhuninn-1", sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: Verdana, "jf-openhuninn-1", sans-serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: Verdana, "jf-openhuninn-1", sans-serif;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 20px;
+  font-family: Verdana, "jf-openhuninn-1", sans-serif;
+  font-weight: 400;
+}
+
+.h1_title {
+  font-size: 50px;
+  font-family: Verdana, "jf-openhuninn-1", sans-serif;
+  font-weight: 400;
+}
+
 header {
   height: 300px;
 }
@@ -766,4 +802,80 @@ body section {
 
 .w {
   width: 28;
+}
+
+.img_a1 {
+  background-image: url("image/a1.jpg");
+}
+
+.img_a2 {
+  background-image: url("image/a2.jpg");
+}
+
+.img_a3 {
+  background-image: url("image/a3.jpg");
+}
+
+.img_banner {
+  background-image: url("image/banner.jpg");
+}
+
+.black {
+  color: #2E3646;
+}
+.black:hover {
+  color: #060708;
+}
+
+.black_b {
+  background-color: #2E3646;
+}
+
+.black_outline {
+  border-color: #2E3646;
+}
+
+.rarkgray {
+  color: #5F6D7E;
+}
+.rarkgray:hover {
+  color: #333b44;
+}
+
+.rarkgray_b {
+  background-color: #5F6D7E;
+}
+
+.rarkgray_outline {
+  border-color: #5F6D7E;
+}
+
+.red {
+  color: #FF3E3E;
+}
+.red:hover {
+  color: #d70000;
+}
+
+.red_b {
+  background-color: #FF3E3E;
+}
+
+.red_outline {
+  border-color: #FF3E3E;
+}
+
+.hotpink {
+  color: #F023FD;
+}
+.hotpink:hover {
+  color: #ad02b8;
+}
+
+.hotpink_b {
+  background-color: #F023FD;
+}
+
+.hotpink_outline {
+  border-color: #F023FD;
 }/*# sourceMappingURL=style.css.map */
