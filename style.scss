@@ -1,6 +1,7 @@
 //base
 @import 'sass/base/var';
 @import 'sass/base/color';
+@import 'sass/base/normal';
 
 @import 'sass/mixin/mixin';
 
@@ -77,6 +78,20 @@ $w : 1200;
 .card {
 @include card(1200px)
 }
+
+$link : #f20;
+
+
+.color_darken {
+ a {   
+  color: $link;
+  font-size: 40px;
+  &:hover {
+    color : darken($link, 20);
+  }
+ }
+}
+
 
 
 
