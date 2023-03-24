@@ -25,10 +25,10 @@ function styleSass() {
 
 exports.style = styleSass;
 
-// html
+// 拆 html 
 const fileinclude = require('gulp-file-include');
 
-exports.html =  function includeHTML() {
+function includeHTML() {
     return src('src/*.html')
         .pipe(fileinclude({
             prefix: '@@',
@@ -36,6 +36,15 @@ exports.html =  function includeHTML() {
         }))
         .pipe(dest('./dist'));
 }
+exports.html = includeHTML;
+
+
+function watchfiles() {
+    watch(['./src/sass/*.scss', './src/sass/**/*.scss'], styleSass);
+    watch(['./src/*.html', './src/**/*.html' , '!dist/*.html'], series(includeHTML))
+}
+
+exports.w = watchfiles
 
 
 
