@@ -52,9 +52,6 @@
   @media screen and (min-width: $bp) {
     @content;
   }
-
-
-
 }
 
 
@@ -77,13 +74,13 @@
   @for $i from 1 through $num {
     @if $bp == null {
       .col-#{$i} {
-        width: calc($i / $num)*100%;
+        width: calc($i / $num) * 100%;
       }
     }
 
     @else {
       .col-#{$bp}-#{$i} {
-        width: calc($i / $num)*100%;
+        width: calc($i / $num) * 100%;
       }
 
     }
