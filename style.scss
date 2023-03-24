@@ -104,7 +104,7 @@ $link : #f20;
 // @for 
 // push 推物件
 
-@mixin push($num , $dir){
+@mixin push($num, $dir) {
     @for $i from 1 through $num {
         .#{$dir}_#{$i} {
             position: relative;
@@ -113,12 +113,15 @@ $link : #f20;
     }
 }
 
-@include push(50 , left);
+// @include push(50 , left);
 
 
+@mixin grid($num) {
+    @for $i from 1 through $num {
+        .col-#{$i} {
+            width: ($i / $num)*100%;
+        }
+    }
+}
 
-
-
-
-
-
+@include grid(12);
