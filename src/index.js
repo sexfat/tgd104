@@ -3,6 +3,9 @@ console.log(a(50, 10));
 
 import $ from 'jquery';
 import { gsap } from "gsap";
+import './css/style.css';
+
+
 
 
 $('body').css('background-color' , '#f20');
