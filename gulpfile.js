@@ -87,5 +87,22 @@ function missionB(cb) {
 //先執行完A 在執行B
 exports.a = series(missionA , missionB)
 
+
+//壓縮圖片大小
+
+const imagemin = require('gulp-imagemin');
+
+function min_images(){
+    return src('src/images/*.*')
+    .pipe(imagemin([
+        imagemin.mozjpeg({quality: 70, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+    ]))
+    .pipe(dest('dist/images'))
+}
+
+
+
+
+
 // A跟B 同時執行
 exports.p = parallel(missionA , missionB)
