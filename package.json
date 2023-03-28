@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/sexfat/tgd104#readme",
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
     "browser-sync": "^2.29.1",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",

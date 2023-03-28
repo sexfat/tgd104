@@ -88,6 +88,10 @@ function missionB(cb) {
 exports.a = series(missionA , missionB)
 
 
+// A跟B 同時執行
+exports.p = parallel(missionA , missionB)
+
+
 //壓縮圖片大小
 
 const imagemin = require('gulp-imagemin');
@@ -100,9 +104,25 @@ function min_images(){
     .pipe(dest('dist/images'))
 }
 
+exports.img = min_images 
+
+
+//  es6 -> es5 
+const babel = require('gulp-babel');
+
+function babel5() {
+    return src('src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dist/js'));
+}
+
+
+
+exports.js = babel5
 
 
 
 
-// A跟B 同時執行
-exports.p = parallel(missionA , missionB)
+
