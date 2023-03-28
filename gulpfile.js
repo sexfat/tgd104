@@ -70,3 +70,22 @@ function browser(done) {
 exports.default = browser;
 
 
+
+// 執行先後順序
+function missionA(cb) {
+    console.log('missionA');
+    cb();
+}
+
+
+function missionB(cb) {
+    console.log('missionB');
+    cb();
+}
+
+
+//先執行完A 在執行B
+exports.a = series(missionA , missionB)
+
+// A跟B 同時執行
+exports.p = parallel(missionA , missionB)
