@@ -5,6 +5,8 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
+const webpack  = require('webpack');
+
 module.exports = {
     entry: { index : './src/index.js'},               // 入口文件
     output: {
@@ -15,19 +17,36 @@ module.exports = {
         rules: [{
             // 格式
             test: /\.(sass|scss|css)$/,
-            //順序是由下到上 sass > css > style
+            //順序是由下到上 css > style
             use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: './dist'
-                }
-              },
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      publicPath: './dist'
+                    }
+                  },
+                // 'style-loader',//跟MiniCssExtractPlugin 會衝突所以要關掉
                 'css-loader',
                 'sass-loader'
             ],
-        }]
+        },
+        //babel loader
+        {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
 
-    },            // 處裡對應模組
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }],
+            include: path.resolve(__dirname, 'src'),
+        },
+        //增加
+
+      ]
+
+    },           // 處裡對應模組
     plugins: [
         // 清除舊的檔案
         new CleanWebpackPlugin(),
@@ -41,7 +60,11 @@ module.exports = {
             //來源
             filename : 'index.html'
             // 目的地
-        })
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          })
     ],                          // 對應的插件
     devServer: {
         contentBase: './dist',
