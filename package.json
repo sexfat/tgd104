@@ -1,0 +1,27 @@
+{
+  "name": "tgd104",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexfat/tgd104.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sexfat/tgd104/issues"
+  },
+  "homepage": "https://github.com/sexfat/tgd104#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5",
+    "jquery": "^3.6.4"
+  }
+}
