@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "打包": "gulp w",
-    "安裝套件": "npm install"
+    "安裝套件": "npm install",
+    "開發用": "gulp",
+    "上線打包": "gulp package"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "browser-sync": "^2.29.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",

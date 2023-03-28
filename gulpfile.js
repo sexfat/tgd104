@@ -14,7 +14,7 @@ function mv(){
 exports.file = mv;
 
 
-//sass編譯
+// 1 sass編譯
 const sass = require('gulp-sass')(require('sass'));
 
 function styleSass() {
@@ -25,7 +25,7 @@ function styleSass() {
 
 exports.style = styleSass;
 
-// 拆 html 
+// 2 拆 html 
 const fileinclude = require('gulp-file-include');
 
 function includeHTML() {
@@ -39,36 +39,14 @@ function includeHTML() {
 exports.html = includeHTML;
 
 
+
+//監看
 function watchfiles() {
     watch(['./src/sass/*.scss', './src/sass/**/*.scss'], styleSass);
     watch(['./src/*.html', './src/**/*.html' , '!dist/*.html'], series(includeHTML))
 }
 
 exports.w = watchfiles
-
-
-
-//gulp 套件引入
-const browserSync = require('browser-sync');
-const reload = browserSync.reload;
-
-
-function browser(done) {
-    browserSync.init({
-        server: {
-            baseDir: "./dist",
-            index: "index.html"
-        },
-        port: 3000
-    });
-    watch(['./src/sass/*.scss', './src/sass/**/*.scss'], styleSass).on("change" , reload);
-    watch(['./src/*.html', './src/**/*.html' , '!dist/*.html'], series(includeHTML)).on("change" , reload);
-    done();
-}
-
-
-exports.default = browser;
-
 
 
 // 執行先後順序
@@ -92,7 +70,7 @@ exports.a = series(missionA , missionB)
 exports.p = parallel(missionA , missionB)
 
 
-//壓縮圖片大小
+//  3 壓縮圖片大小
 
 const imagemin = require('gulp-imagemin');
 
@@ -107,7 +85,15 @@ function min_images(){
 exports.img = min_images 
 
 
-//  es6 -> es5 
+// 4 搬圖片
+function mvimg(){
+    return src(['src/images/*.*' , 'src/images/**/*.*']).pipe(dest('dist/images'))
+}
+
+
+
+
+// 5 js es6 -> es5 
 const babel = require('gulp-babel');
 
 function babel5() {
@@ -121,6 +107,46 @@ function babel5() {
 
 
 exports.js = babel5
+
+
+//6 清除舊檔案
+const clean = require('gulp-clean');
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+exports.c = clear
+
+
+
+
+// 7 瀏覽器同步
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(['./src/sass/*.scss', './src/sass/**/*.scss'], styleSass).on("change" , reload);
+    watch(['./src/*.html', './src/**/*.html' , '!dist/*.html'], series(includeHTML)).on("change" , reload);
+    done();
+}
+
+// exports.default = browser;
+
+// 開發用
+exports.default = series( parallel(includeHTML , styleSass , babel5 ,mvimg) , browser)
+
+
+//上線用
+exports.package = series(clear , parallel(includeHTML , styleSass , babel5 ,min_images))
 
 
 
