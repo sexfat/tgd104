@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "安裝套件": "npm i",
-    "開發用": "webpack -d -w",
+    "開發用": "webpack-dev-server",
     "上線用": "webpack -p" 
   },
   "repository": {

@@ -11,7 +11,7 @@ import './css/style.css';
 import './sass/style.scss';
 
 
-$('body').css('background-color' , '#f20');
+$('body').css('background-color' , '#eee');
 
 gsap.to('.box' , {
     x: 400,
