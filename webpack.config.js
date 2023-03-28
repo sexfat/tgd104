@@ -2,10 +2,10 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: './src/index.js',               // 入口文件
+    entry: { index : './src/index.js'},               // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'   
+        filename: '[name].bundle.js'   
     },              // 出口文件
     module: {
         rules: [{
@@ -26,7 +26,7 @@ module.exports = {
     },            // 處裡對應模組
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "./style.css"
+            filename: "./[name].css"
         })
     ],                          // 對應的插件
     //devServer: {},           // 服務器配置
